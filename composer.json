@@ -1,0 +1,27 @@
+{
+    "name": "mvishal/adminlte",
+    "description": "Laravel package",
+    "license": "MIT",
+    "type": "library",
+    "require": {
+        "php": ">=7.0",
+        "illuminate/support": "5.*"
+    },
+    "author": {
+        "name": "mvishal",
+        "email": "vishal"
+    },
+    "autoload": {
+        "psr-4": {
+            "Mvishal\\Adminlte\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Mvishal\\Adminlte\\AdminlteServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev"
+}

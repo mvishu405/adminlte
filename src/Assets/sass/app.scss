@@ -1,0 +1,30 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
+// Variables
+//@import "variables";
+// Bootstrap
+@import '~bootstrap-sass/assets/stylesheets/bootstrap';
+//Ionicons
+@import "~ionicons/dist/scss/ionicons.scss";
+//Font awesome
+@import "~font-awesome/scss/font-awesome.scss";
+
+.navbar-laravel {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: 'Source Sans Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-weight: 400;
+    overflow-x: hidden;
+    overflow-y: auto
+}
+
+form{
+    label{
+        font-weight: bold;
+    }
+}
