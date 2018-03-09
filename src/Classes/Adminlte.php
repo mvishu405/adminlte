@@ -114,12 +114,20 @@ class Adminlte implements AdminlteContract
         return config('adminlte.admin_path');
     }
 
-    public function getAdminUrl($url)
+    public function getAdminUrl($name = null)
     {
-        if (isset($url)) {
-            return str_finish($this->getAdminPath(), '/') . $url;
+        if (isset($name)) {
+            return str_finish($this->getAdminPath(), '/') . $name;
         }
         return $this->getAdminPath();
+    }
+
+    public function getFullAdminUrl($name = null)
+    {
+        if (isset($name)) {
+            return url(str_finish($this->getAdminPath(), '/') . $name);
+        }
+        return url($this->getAdminPath());
     }
 
     public function activate_menu($url, $root = false)

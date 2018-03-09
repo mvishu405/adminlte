@@ -1,6 +1,6 @@
 {
     "name": "mvishal/adminlte",
-    "description": "Laravel package",
+    "description": "Adminlte Laravel package",
     "license": "MIT",
     "type": "library",
     "require": {

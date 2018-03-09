@@ -21,7 +21,7 @@ class AdminlteServiceProvider extends ServiceProvider
         $this->defineRoutes($router);
         $this->publishViews();
         $this->publishResourceAssets();
-//        $this->publishPublicAssets();
+        $this->publishPublicAssets();
         $this->publishConfig();
         $this->changeRegisterController();
         $this->changeLoginController();
