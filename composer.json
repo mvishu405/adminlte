@@ -30,9 +30,9 @@
         }
     },
     "scripts": {
-      "post-root-package-install": [
-        "php artisan vendor:publish --tag=adminlte --force",
-        "php artisan adminlte:info"
+      "post-package-install": [
+        "@php artisan vendor:publish --tag=adminlte --force",
+        "@php artisan adminlte:info"
       ]
     },
     "minimum-stability": "dev"
