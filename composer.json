@@ -25,7 +25,7 @@
                 "Mvishal\\Adminlte\\AdminlteServiceProvider"
             ],
             "aliases": {
-              "Adminlte": "Mvishal\\Adminlte\\Facade\\Adminlte"
+              "Adminlte": "Mvishal\\Adminlte\\Facades\\Adminlte"
             }
         }
     },
