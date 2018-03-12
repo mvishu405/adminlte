@@ -149,14 +149,14 @@ class Adminlte implements AdminlteContract
         return env('APP_NAME');
     }
 
-    //I have used---
-
     public function webroutes()
     {
         return [
-            ADMINLTETEMPLATE_PATH . '/routes/web.php' => base_path('routes/web.php')
+            ADMINLTETEMPLATE_PATH . '/src/routes/web.php' => base_path('routes/web.php')
         ];
     }
+
+    //I have used---
 
     public function authConfig()
     {

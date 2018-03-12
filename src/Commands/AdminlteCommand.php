@@ -37,6 +37,6 @@ class AdminlteCommand extends Command
      */
     public function handle()
     {
-        $this->line('Package created using Bootpack.');
+        $this->line('Please support me with putting star on github repo');
     }
 }

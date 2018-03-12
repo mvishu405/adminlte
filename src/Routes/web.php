@@ -15,6 +15,18 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::group(['middleware' => 'auth'], function () {
+
+/*
+|--------------------------------------------------------------------------
+| Admin Routes
+|--------------------------------------------------------------------------
+|
+*/
+
+Route::namespace('AdminController')->prefix(\Mvishal\Adminlte\Facades\Adminlte::getAdminPath())->name('admin.')->middleware(['auth'])->group(function () {
+
+    Route::get('/test', function () {
+
+    })->name('test');
 
 });

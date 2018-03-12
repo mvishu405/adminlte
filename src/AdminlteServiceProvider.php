@@ -5,6 +5,7 @@ namespace Mvishal\Adminlte;
 use Illuminate\Console\DetectsApplicationNamespace;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Routing\Router;
+use Mvishal\Adminlte\Commands\AdminlteCommand;
 use Mvishal\Adminlte\Facades\Adminlte;
 
 class AdminlteServiceProvider extends ServiceProvider
@@ -31,6 +32,7 @@ class AdminlteServiceProvider extends ServiceProvider
         $this->publishDashboardController();
         $this->publishSettingController();
         $this->publishRedirectIfAuthenticatedMiddleware();
+        $this->publishWebRoutes();
     }
 
     /**
@@ -42,6 +44,10 @@ class AdminlteServiceProvider extends ServiceProvider
     {
         if (!defined('ADMINLTETEMPLATE_PATH')) {
             define('ADMINLTETEMPLATE_PATH', realpath(__DIR__ . '/../'));
+        }
+
+        if ($this->app->runningInConsole()) {
+            $this->commands([AdminlteCommand::class]);
         }
 
         $this->app->bind('Adminlte', function () {
@@ -120,5 +126,10 @@ class AdminlteServiceProvider extends ServiceProvider
     private function publishRedirectIfAuthenticatedMiddleware()
     {
         $this->publishes(Adminlte::redirectIfAuthenticatedMiddleware(), 'adminlte');
+    }
+
+    private function publishWebRoutes()
+    {
+        $this->publishes(Adminlte::webroutes(), 'adminlte');
     }
 }
