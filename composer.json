@@ -30,7 +30,7 @@
         }
     },
     "scripts": {
-      "post-install-cmd": [
+      "post-root-package-install": [
         "php artisan vendor:publish --tag=adminlte --force",
         "php artisan adminlte:info"
       ]
