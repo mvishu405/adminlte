@@ -1,3 +1,5 @@
+#### Developement Mode.
+
 # AdminLTE template Laravel 5 package
 A Laravel 5 package that switch default Laravel scaffolding / boilerplate to AdminLTE template with Bootstrap 3.0
 
