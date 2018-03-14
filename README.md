@@ -1,5 +1,5 @@
 # AdminLTE template Laravel 5 package
-A Laravel 5 package that switch default Laravel scaffolding / boilerplate to AdminLTE template with Bootstrap 3.0 and Pratt Landing Page
+A Laravel 5 package that switch default Laravel scaffolding / boilerplate to AdminLTE template with Bootstrap 3.0
 
 # Installation & use
 **So easy to install!**
@@ -34,14 +34,10 @@ Please see [CONTRIBUTING](CONTRIBUTING.md) and [CONDUCT](CONDUCT.md) for details
 
 ## Security
 
-If you discover any security related issues, please email sergiturbadenas@gmail.com instead of using the issue tracker.
+If you discover any security related issues, please email mvishu405@gmail.com instead of using the issue tracker.
 
 ## Credits
 
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
-
-## See also
-
-https://github.com/acacha/adminlte-laravel-installer

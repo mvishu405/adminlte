@@ -11,14 +11,14 @@ class AdminlteCommand extends Command
      *
      * @var string
      */
-    protected $signature = 'adminlte:info';
+    protected $signature = 'adminlte:install';
 
     /**
      * The console command description.
      *
      * @var string
      */
-    protected $description = 'Shows the adminlte package information';
+    protected $description = 'Oops we are working on it!!';
 
     /**
      * Create a new command instance.
