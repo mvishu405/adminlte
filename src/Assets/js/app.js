@@ -23,6 +23,7 @@ Vue.component('register-form', require('./components/auth/RegisterForm.vue'));
 Vue.component('email-reset-password-form', require('./components/auth/EmailResetPasswordForm.vue'));
 Vue.component('reset-password-form', require('./components/auth/ResetPasswordForm.vue'));
 Vue.component('user-form', userForm);
+Vue.component('clock', require('./components/clock/Clock.vue'));
 
 const app = new Vue({
     el: '#app'

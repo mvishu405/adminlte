@@ -6,5 +6,5 @@
 
 
 @section('main-content')
-<h1>Build something amazing</h1>
+    <h1>Build something amazing</h1>
 @endsection

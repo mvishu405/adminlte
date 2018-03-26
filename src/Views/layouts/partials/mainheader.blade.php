@@ -2,13 +2,12 @@
 <header class="main-header">
 
     <!-- Logo -->
-    <a href="{{ route('admin') }}" class="logo">
+    <a href="{{ Adminlte::getFullAdminUrl('/') }}" class="logo">
         <!-- mini logo for sidebar mini 50x50 pixels -->
         <span class="logo-mini">{{ Adminlte::getAppName() }}</span>
         <!-- logo for regular state and mobile devices -->
         <span class="logo-lg">{{ Adminlte::getAppName() }}</span>
     </a>
-
     <!-- Header Navbar -->
     <nav class="navbar navbar-static-top" role="navigation">
         <!-- Sidebar toggle button-->
@@ -22,14 +21,17 @@
                     <li><a href="{{ url('/register') }}">{{ trans('adminlte_lang::message.register') }}</a></li>
                     <li><a href="{{ url('/login') }}">{{ trans('adminlte_lang::message.login') }}</a></li>
             @else
+                    <li>
+                        <a href=""><clock :blink="true"></clock></a>
+                    </li>
                 <!-- User Account Menu -->
                     <li class="dropdown user user-menu" id="user_menu" style="max-width: 280px;white-space: nowrap;">
                         <!-- Menu Toggle Button -->
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown"
                            style="max-width: 280px;white-space: nowrap;overflow: hidden;overflow-text: ellipsis">
                             <!-- The user image in the navbar-->
-                        <img src="http://placehold.it/50x50" class="user-image img-circle" alt="User Image"/>
-                        <!-- hidden-xs hides the username on small devices so only the image appears. -->
+                            <img src="http://placehold.it/50x50" class="user-image img-circle" alt="User Image"/>
+                            <!-- hidden-xs hides the username on small devices so only the image appears. -->
                             <span class="hidden-xs" data-toggle="tooltip"
                                   title="{{ Auth::user()->name }}">{{ Auth::user()->name }}</span>
                         </a>
@@ -39,26 +41,15 @@
                                 <img src="http://placehold.it/200x200" class="img-circle" alt="User Image"/>
                                 <p>
                                     <span data-toggle="tooltip"
-                                          title="{{ Auth::user()->name }}">{{ Auth::user()->name }}</span>
-                                    {{--<small>{{ trans('adminlte_lang::message.login') }} Nov. 2012</small>--}}
+                                          title="{{ Adminlte::user()->name }}">{{ Adminlte::user()->name }} - Web Developer</span>
+                                    <small>Member Since Nov. 2012</small>
                                 </p>
                             </li>
                             <!-- Menu Body -->
-                        {{--<li class="user-body">
-                            <div class="col-xs-4 text-center">
-                                <a href="#">{{ trans('adminlte_lang::message.followers') }}</a>
-                            </div>
-                            <div class="col-xs-4 text-center">
-                                <a href="#">{{ trans('adminlte_lang::message.sales') }}</a>
-                            </div>
-                            <div class="col-xs-4 text-center">
-                                <a href="#">{{ trans('adminlte_lang::message.friends') }}</a>
-                            </div>
-                        </li>--}}
-                        <!-- Menu Footer-->
+                            <!-- Menu Footer-->
                             <li class="user-footer">
                                 <div class="pull-left">
-                                    <a href="{{ url('/user/profile') }}"
+                                    <a href="{{ Adminlte::getFullAdminUrl('setting') }}"
                                        class="btn btn-default btn-flat">Profile</a>
                                 </div>
                                 <div class="pull-right">

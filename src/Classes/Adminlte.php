@@ -2,6 +2,7 @@
 
 namespace Mvishal\Adminlte\Classes;
 
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Request;
 use Mvishal\Adminlte\Contracts\AdminlteContract;
 
@@ -147,6 +148,14 @@ class Adminlte implements AdminlteContract
     public function getAppName()
     {
         return env('APP_NAME');
+    }
+
+    public function user($guard = 'web')
+    {
+        if (Auth::guard($guard)->check()){
+            return Auth::guard($guard)->user();
+        }
+        return null;
     }
 
     public function webroutes()
